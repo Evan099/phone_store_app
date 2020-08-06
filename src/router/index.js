@@ -5,6 +5,7 @@ import Home from '../views/Home'
 import AddressList from '../views/AddressList'
 import InsertAddress from '../views/InsertAddress'
 import UpdateAddress from '../views/UpdateAddress'
+import OrderDetail from '../views/OrderDetail'
 
 Vue.use(Router)
 export default new Router({
@@ -34,6 +35,11 @@ export default new Router({
       path: '/UpdateAddress',
       name: 'UpdateAddress',
       component: UpdateAddress
+    },
+    {
+      path: '/OrderDetail',
+      name: 'OrderDetail',
+      component: OrderDetail
     },
   ]
 })

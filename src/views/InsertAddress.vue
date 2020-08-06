@@ -5,7 +5,6 @@
         show-delete
         show-set-default
         show-search-result
-
         address-info = addressInfo
 
         @save="onSave"
@@ -30,7 +29,6 @@
 
           let e = addressInfo
 
-
           const name = e.name;
           const tel = e.tel;
           const province = e.province
@@ -48,9 +46,6 @@
            }else{
              this.$notify({ type: 'danger', message: rs.msg});
            }
-
-
-
 
         },
         onDelete() {

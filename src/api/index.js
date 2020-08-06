@@ -21,3 +21,15 @@ export const addressList = ({}) => ajax(basicUrl + '/address/list', {})
 
 //增加一个地址
 export const insertOneAddress = ({name,tel,province,city,county,areaCode,addressDetail,isDefault}) => ajax(basicUrl + '/address/create', {name,tel,province,city,county,areaCode,addressDetail,isDefault},"POST")
+
+//修改一个地址
+export const updateOneAddress = ({id,name,tel,province,city,county,areaCode,addressDetail,isDefault}) => ajax(basicUrl + '/address/create', {id,name,tel,province,city,county,areaCode,addressDetail,isDefault},"POST")
+
+//提交订单
+export const creatOrder = ({name,tel,address,specsId,quantity}) => ajax(basicUrl + '/order/create', {name,tel,address,specsId,quantity},'POST')
+
+//查询订单详情
+export const serchOrderDetail = ({orderId}) => ajax(basicUrl + '/order/detail', {orderId})
+
+//订单支付
+export const pay = ({orderId}) => ajax(basicUrl + '/order/pay', {orderId},'PUT')

@@ -104,11 +104,11 @@
         },
         onBuyClicked(){//选中规格是点击购买
           const getSku = this.$refs.getSku.getSkuData()
-          const specsId = getSku.selectedSkuComb.s1
+          const specsId = getSku.selectedSkuComb.s1//id值
+          const selectedNum = getSku.selectedNum//购买数量
 
-          this.$router.push({path:'/AddressList',query:{specsId:specsId}})
+          this.$router.push({path:'/AddressList',query:{specsId:specsId, quantity:selectedNum}})
 
-          console.log(specsId)
         }
       },
       mounted() {
